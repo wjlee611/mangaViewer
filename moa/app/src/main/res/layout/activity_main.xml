@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <TabHost
+        android:id="@+id/tabhost1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/contents1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="#3B9A9C">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingTop="4dp">
+
+                                <TextView
+                                    android:id="@+id/curhttp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="http / https"
+                                    android:textSize="12dp"
+                                    android:background="@drawable/http_box"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingLeft="5dp"
+                                    android:fontFamily="@font/maplestorylight"/>
+
+                                <TextView
+                                    android:id="@+id/curUrl"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Loading..."
+                                    android:textSize="12dp"
+                                    android:singleLine="true"
+                                    android:textColor="#ffffff"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/maplestorylight"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingBottom="2dp">
+
+                                <TextView
+                                    android:id="@+id/curtitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="None"
+                                    android:textSize="12dp"
+                                    android:singleLine="true"
+                                    android:textColor="#ffffff"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/maplestorylight"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <Button
+                            android:id="@+id/btnFord"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text=">"
+                            android:textSize="15dp"
+                            android:background="@drawable/button"
+                            android:gravity="center"
+                            android:textColor="#3B9A9C"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/maplestorylight"/>
+
+                        <Button
+                            android:id="@+id/btnInfo"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="ⓘ"
+                            android:textSize="20dp"
+                            android:background="@drawable/button"
+                            android:gravity="center"
+                            android:textColor="#3B9A9C"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/maplestorylight"/>
+
+                    </LinearLayout>
+
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/contentSwipeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <WebView
+                            android:id="@+id/webView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/contents2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:fontFamily="@font/maplestorylight">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="6"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="저장 된 북마크"
+                            android:textSize="30dp"
+                            android:textColor="#3B9A9C"
+                            android:fontFamily="@font/maplestorylight"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/numOfIndex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Calculating..."
+                                android:textSize="18dp"
+                                android:fontFamily="@font/maplestorylight"
+                                android:textColor="#000"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" / 최대 100개"
+                                android:textSize="15dp"
+                                android:fontFamily="@font/maplestorylight"
+                                android:textColor="#000"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="클릭시 해당 주소(메인 화면)으로 이동 및 기록을 지웁니다.\n길게 누를시 현재 주소로 변경합니다. (메인 주소로 변경해주세요!)"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="12dp"
+                        android:textColor="#000"
+                        android:background="#78fee0"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/maplestorylight"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#78FEE0"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"/>
+
+                    <TextView
+                        android:id="@+id/mainUrl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loading current main address..."
+                        android:textColor="#3B9A9C"
+                        android:padding="10dp"
+                        android:textSize="18dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/maplestorylight"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#78FEE0"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="북마크 클릭시 해당 만화 페이지로 이동합니다.\n북마크 길게 누를시 해당 북마크를 삭제합니다."
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:fontFamily="@font/maplestorylight"
+                        android:textColor="#000"
+                        android:textSize="15dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#999"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/llCover1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:layout_weight="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Loading Bookmark Data..."
+                            android:textSize="18dp"
+                            android:fontFamily="@font/maplestorylight"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llCover2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_weight="4">
+
+                        <ListView
+                            android:id="@+id/listview1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:stackFromBottom="true"
+                            android:fontFamily="@font/maplestorylight"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <Button
+                    android:id="@+id/btnBookmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="북마크"
+                    android:background="@drawable/button"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/maplestorylight"/>
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/maplestorylight"/>
+            </LinearLayout>
+        </LinearLayout>
+    </TabHost>
+
+
+</LinearLayout>

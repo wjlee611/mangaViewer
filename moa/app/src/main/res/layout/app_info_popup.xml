@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/app_info_popup_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="앱 정보"
+        android:background="@drawable/title"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/maplestorylight"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개발자"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/title"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:fontFamily="@font/maplestorylight"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="낭랑냥냥 NLNN"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000"
+            android:fontFamily="@font/maplestorylight"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="앱 버전"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/title"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:fontFamily="@font/maplestorylight"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v.1.08"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000"
+            android:fontFamily="@font/maplestorylight"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개발 환경"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/title"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:fontFamily="@font/maplestorylight"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android Studio 3.6.1"
+            android:textSize="13dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000"
+            android:fontFamily="@font/maplestorylight"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="업데이트 기록"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/title"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/maplestorylight"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/maplestorylight"
+                    android:text="v.1.08 업데이트 내역_\n - UI 개선\n - 북마크 덮어쓰기 버그 픽스\n - 북마크시 해당 북마크 위치로 오토스크롤\n\nv.1.07 업데이트 내역_\n - 북마크 덮어쓰기 기능 추가\n - 북마크 데이터 안정성 강화\n - 기타 여럿 편의성 개선\n\nv.1.06 업데이트 내역_\n - 앞으로가기 버튼 추가\n - 메인 주소 수정기능 추가\n - 데이터 백업 안전장치 코드 추가\n\nv.1.05 업데이트 내역_\n - 웹뷰 이미지 처리 등 기능 개선\n - 최적화시 캐시 제거 기능 추가\n - 북마크 데이터 처리 개선 및 백업기능 추가\n\nv.1.04 업데이트 내역_\n - 인덱스 추출 알고리즘 개선 및 버그 픽스\n - 북마크 제거 알고리즘 개선 및 버그 픽스\n - 북마크 제목 추천 기능 추가\n\nv.1.00 - v.1.03 업데이트 내역_\n - 내부 테스트"
+                    android:textColor="#000"
+                    android:textSize="13dp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="데이터 백업 / 복구 방법"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/title"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/maplestorylight"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - 백업\n  ⓘ를 길게 눌러서 데이터 코드를 복사하여 보관하세요!\n\n - 복구\n  데이터 코드를 붙여넣고 적용을 누르세요!"
+            android:textSize="13dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#000"
+            android:fontFamily="@font/maplestorylight"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

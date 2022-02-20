@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 타이틀바 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="북마크 데이터 이동"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:background="#4BC2C5"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:fontFamily="@font/maplestorylight"/>
+    </LinearLayout>
+    <!-- //end 타이틀바 -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:padding="24dp"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="데이터 코드 백업"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/maplestorylight"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <Button
+                android:id="@+id/btnCopyDataCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="클립보드에 복사"
+                android:fontFamily="@font/maplestorylight"
+                android:padding="15dp"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- Notice -->
+    <LinearLayout
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:gravity="bottom">
+
+        <TextView
+            android:text="데이터 코드 복구"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/maplestorylight"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etDataCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="300dp"
+                android:hint="데이터 코드 입력 후 적용을 누르세요\n초기화: 공백"
+                android:textSize="12dp"
+                android:layout_gravity="bottom"
+                android:fontFamily="@font/maplestorylight"/>
+        </ScrollView>
+
+    </LinearLayout>
+    <!-- Notice -->
+
+    <View
+        android:background="#66bdbdbd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:gravity="bottom"/>
+
+    <!-- 닫기 버튼 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/btnDlgCancel2"
+            android:text="취소"
+            android:textSize="15sp"
+            android:textColor="#CB4245"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="#00000000"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="53dp"
+            android:onClick="mOnClose"
+            android:fontFamily="@font/maplestorylight"/>
+
+        <Button
+            android:id="@+id/btnDlgOK2"
+            android:text="적용"
+            android:textSize="15sp"
+            android:textColor="#4BC2C5"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="#00000000"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="53dp"
+            android:onClick="mOnClose"
+            android:fontFamily="@font/maplestorylight"/>
+    </LinearLayout>
+    <!--// 닫기 버튼 -->
+</LinearLayout>
